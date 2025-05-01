@@ -1,5 +1,8 @@
 package com.example.booksport.model
 
+import java.time.LocalDate
+import java.time.LocalTime
+
 data class Booking(
     val id: Int,
     val user: User,

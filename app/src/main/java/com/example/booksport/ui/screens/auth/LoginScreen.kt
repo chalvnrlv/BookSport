@@ -19,8 +19,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.booksport.R
-import com.example.booksport.data.AuthData
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import com.example.booksport.model.data.AuthData
 
+// Update the Font usage
+Font(R.font.sora_semibold)
+
+// Update VisualTransformation.None
+visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None
 @Composable
 fun LoginScreen(navController: NavController) {
     var email by remember { mutableStateOf("") }

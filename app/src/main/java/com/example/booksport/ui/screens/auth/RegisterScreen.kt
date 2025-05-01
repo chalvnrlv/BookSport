@@ -9,15 +9,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.booksport.R
-import com.example.booksport.data.AuthData
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import com.example.booksport.model.User
+import com.example.booksport.model.data.AuthData
+
+Box(
+modifier = Modifier
+.fillMaxSize()
+.background(Color(0xFFFCFCFC))
+) {
+    // Content here
+}
+
+// Make CustomTextField public (remove private modifier)
+@Composable
+fun CustomTextField(...)
 
 @Composable
 fun RegisterScreen(navController: NavController) {
