@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.booksport.navigation.AuthNavigation
+import com.example.booksport.navigation.AppNavigation
 import com.example.booksport.ui.theme.BookSportTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BookSportTheme {
-                AuthNavigation()
+                AppNavigation()
             }
         }
     }
@@ -23,6 +23,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     BookSportTheme {
-        AuthNavigation()
+        AppNavigation()
     }
 }
