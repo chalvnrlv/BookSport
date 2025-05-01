@@ -60,13 +60,12 @@ fun LoginScreen(navController: NavController) {
 
         Column(
             modifier = Modifier
-                .width(384.dp)
-                .height(196.dp)
+                .fillMaxWidth()
                 .background(
                     color = Color(0x80000000),
                     shape = RoundedCornerShape(25.dp)
                 )
-                .padding(start = 156.dp, top = 9.dp, end = 156.dp, bottom = 9.dp)
+                .padding(horizontal = 26.dp, vertical = 24.dp)
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -102,7 +101,13 @@ fun LoginScreen(navController: NavController) {
                     .height(38.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.White)
             ) {
-                Text("Sign In")
+                Text(text = "Sign In",
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.sora_semibold)),
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
+                    ))
             }
 
             TextButton(onClick = { navController.navigate("register") }) {
@@ -133,8 +138,9 @@ fun CustomTextField(
         placeholder = { Text(placeholder) },
         visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
         modifier = Modifier
-            .fillMaxWidth()
-            .background(Color(0xFFD9D9D9), shape = RoundedCornerShape(15.dp))
+            .width(332.dp)
+            .height(55.dp)
+            .background(Color(0xFFD9D9D9), shape = RoundedCornerShape(20.dp))
     )
 }
 
