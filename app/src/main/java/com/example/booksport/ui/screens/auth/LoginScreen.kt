@@ -90,7 +90,8 @@ fun LoginScreen(navController: NavController) {
                     } else {
                         val user = AuthData.users.find { it.email == email && it.password == password }
                         if (user != null) {
-                            navController.navigate("main") {  // Changed from "home" to "main"
+                            AuthData.currentUser = user
+                            navController.navigate("main") {
                                 popUpTo("login") { inclusive = true }
                             }
                         } else {

@@ -7,4 +7,6 @@ object AuthData {
         User("user@example.com", "password123", "John Doe"),
         User("an@jay.com", "anjay", "Anjay Mabar")
     )
+
+    var currentUser: User? = null
 }

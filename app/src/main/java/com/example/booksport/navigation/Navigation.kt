@@ -4,26 +4,36 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.booksport.model.data.VenueData
 import com.example.booksport.ui.screens.auth.LoginScreen
 import com.example.booksport.ui.screens.auth.RegisterScreen
+import com.example.booksport.ui.screens.main.BookingScreen
 import com.example.booksport.ui.screens.main.MainScreen
 
 @Composable
 fun AppNavigation() {
-    val navController = rememberNavController()
+    val rootNavController = rememberNavController()
 
     NavHost(
-        navController = navController,
+        navController = rootNavController,
         startDestination = "login"
     ) {
         composable("login") {
-            LoginScreen(navController = navController)
+            LoginScreen(navController = rootNavController)
         }
         composable("register") {
-            RegisterScreen(navController = navController)
+            RegisterScreen(navController = rootNavController)
         }
         composable("main") {
-            MainScreen(rootNavController = navController)
+            MainScreen(rootNavController = rootNavController)
+        }
+        composable("booking/{venueId}") { backStackEntry ->
+            val venueId = backStackEntry.arguments?.getString("venueId")?.toIntOrNull()
+            val venue = VenueData.venues.find { it.id == venueId }
+            BookingScreen(
+                venue = venue,
+                navController = rootNavController
+            )
         }
     }
 }

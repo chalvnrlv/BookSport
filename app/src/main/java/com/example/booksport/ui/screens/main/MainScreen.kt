@@ -22,9 +22,18 @@ fun MainScreen(rootNavController: NavHostController) {
             startDestination = "home",
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable("home") { HomeScreen() }
-            composable("bookings") { BookingScreen() }
-            composable("profile") { ProfileScreen() }
+            composable("home") {
+                HomeScreen(navController = rootNavController)
+            }
+            composable("bookings") {
+                BookingScreen(
+                    venue = null,
+                    navController = rootNavController
+                )
+            }
+            composable("profile") {
+                ProfileScreen()
+            }
         }
     }
 }
