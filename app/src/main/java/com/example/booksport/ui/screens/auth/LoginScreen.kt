@@ -48,7 +48,7 @@ fun LoginScreen(navController: NavController) {
             modifier = Modifier
                 .width(284.dp)
                 .height(129.dp)
-                .absoluteOffset(x = 22.dp, y = 149.dp),
+                .absoluteOffset(x = 22.dp, y = 129.dp),
             style = TextStyle(
                 fontSize = 36.sp,
                 lineHeight = 43.2.sp,
