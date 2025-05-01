@@ -12,7 +12,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.booksport.R
 import com.example.booksport.model.data.AuthData
@@ -35,6 +40,20 @@ fun RegisterScreen(navController: NavController) {
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
+        )
+        Text(
+            text = "Register",
+            modifier = Modifier
+                .width(284.dp)
+                .height(129.dp)
+                .absoluteOffset(x = 22.dp, y = 149.dp),
+            style = TextStyle(
+                fontSize = 36.sp,
+                lineHeight = 43.2.sp,
+                fontFamily = FontFamily(Font(R.font.sora_semibold)),
+                fontWeight = FontWeight.SemiBold,
+                color = Color.White
+            )
         )
         Column(
             modifier = Modifier
@@ -84,7 +103,13 @@ fun RegisterScreen(navController: NavController) {
                     .height(38.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.White)
             ) {
-                Text("Register")
+                Text(text = "Register",
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontFamily = FontFamily(Font(R.font.sora_semibold)),
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
+                    ))
             }
         }
     }
