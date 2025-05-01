@@ -4,6 +4,7 @@ import com.example.booksport.model.User
 
 object AuthData {
     val users = mutableListOf(
-        User("user@example.com", "password123", "John Doe")
+        User("user@example.com", "password123", "John Doe"),
+        User("an@jay.com", "anjay", "Anjay Mabar")
     )
 }
