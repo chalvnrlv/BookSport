@@ -9,7 +9,4 @@ data class Booking(
     val venue: Venue,
     val date: LocalDate,
     val timeSlots: List<LocalTime>,
-    val status: BookingStatus
 )
-
-enum class BookingStatus { ACTIVE, COMPLETED, CANCELLED }

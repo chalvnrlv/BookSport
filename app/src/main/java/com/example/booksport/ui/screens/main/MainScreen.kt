@@ -27,7 +27,6 @@ fun MainScreen(rootNavController: NavHostController) {
             }
             composable("bookings") {
                 BookingScreen(
-                    venue = null,
                     navController = rootNavController
                 )
             }
